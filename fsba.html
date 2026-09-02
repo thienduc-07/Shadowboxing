@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Slider Background</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Tắt khử răng cưa để giữ nét pixel sắc cạnh */
+        * { image-rendering: pixelated; }
+    </style>
+</head>
+<body class="bg-gray-500 h-screen flex flex-col items-center justify-center">
+
+    <h1 class="text-white font-mono text-lg mb-8">Bấm Cmd + Shift + 4 để cắt thanh này nhe:</h1>
+
+    <!-- Khối Slider Background mô phỏng pixel 8-bit -->
+    <div class="flex flex-col items-center">
+        <!-- Cạnh trên cùng -->
+        <div class="w-[304px] h-[4px] bg-black"></div>
+        <!-- Bo góc trên -->
+        <div class="w-[312px] h-[4px] bg-white border-x-[4px] border-black"></div>
+        
+        <!-- Thân giữa màu trắng -->
+        <div class="w-[320px] h-[32px] bg-white border-x-[4px] border-black relative">
+            <!-- (Tùy chọn) Chỗ này sau này trong Unity sẽ là nơi Fill chạy qua -->
+        </div>
+        
+        <!-- Bo góc dưới -->
+        <div class="w-[312px] h-[4px] bg-white border-x-[4px] border-black"></div>
+        <!-- Cạnh dưới cùng -->
+        <div class="w-[304px] h-[4px] bg-black"></div>
+    </div>
+
+</body>
+</html>
