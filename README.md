@@ -15,7 +15,7 @@ Welcome to the official repository of **Shadow Boxing**! This isn't just a simpl
 > **Note:** You cannot reuse a direction that is already locked in your current combo sequence.
 
 ### 🛠 Installation Guide
-Navigate to the **Releases** section on the right side of this repository to download the latest playable builds.
+Navigate to the **[Releases](https://github.com/thienduc-07/Shadowboxing/releases/latest)** section on the right side of this repository to download the latest playable builds.
 *   **macOS:** Download `ShadowBoxingMac.zip`, extract, and open the `.app` file. *(Security Note: Go to System Settings > Privacy & Security > click "Open Anyway" if prompted).*
 *   **Windows:** Download `ShadowBoxingWin.zip`, extract, and run the `.exe` file.
 
@@ -39,6 +39,6 @@ Chào mừng bạn đến với kho mã nguồn chính thức của **Shadow Box
 > **Lưu ý:** Không được chọn trùng lại hướng đã dùng trong chuỗi combo hiện tại.
 
 ### 🛠 Hướng Dẫn Cài Đặt
-Vào mục **Releases** ở cột bên phải màn hình GitHub để tải phiên bản mới nhất về chơi ngay!
+Vào mục **[Releases](https://github.com/thienduc-07/Shadowboxing/releases/latest)** ở cột bên phải màn hình GitHub (hoặc bấm trực tiếp vào chữ này) để tải phiên bản mới nhất về chơi ngay!
 *   **macOS:** Tải `ShadowBoxingMac.zip`, giải nén và mở file `.app`. *(Lưu ý: Nếu bị cảnh báo bảo mật, vào Cài đặt hệ thống > Quyền riêng tư & Bảo mật > kéo xuống chọn "Vẫn mở / Open Anyway").*
 *   **Windows:** Tải `ShadowBoxingWin.zip`, giải nén và chạy file `.exe`.
