@@ -1,5 +1,4 @@
 # 🥊 Shadow Boxing - The Ultimate Mind Game! 
-**(English Version)**
 
 Welcome to the official repository of **Shadow Boxing**! This isn't just a simple fighting game; it's a test of psychology, reflexes, and the ability to "read" your opponent. Developed by Lê Thiên Đức, the game delivers a fast-paced tactical fighting experience, combined with a nostalgic Pixel Art style and a setting deeply inspired by UEH university.
 
@@ -24,7 +23,6 @@ Navigate to the **Releases** section on the right side of this repository to dow
 ---
 
 # 🥊 Shadow Boxing - Màn "Đọc Vị" Cực Căng!
-**(Phiên bản Tiếng Việt)**
 
 Chào mừng bạn đến với kho mã nguồn chính thức của **Shadow Boxing**! Đây không chỉ là một tựa game đối kháng đơn thuần, mà là một trò chơi thử thách tâm lý, phản xạ và khả năng "đọc vị" đối thủ trong từng lượt đấu. Được phát triển bởi Lê Thiên Đức, trò chơi mang đến trải nghiệm đối kháng chiến thuật nhịp độ cao, kết hợp cùng phong cách đồ họa Pixel Art hoài cổ và bối cảnh đậm chất sinh viên UEH.
 
