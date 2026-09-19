@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 public class ShadowBoxingLogic
 {
     public Player Player1 { get; private set; }
@@ -9,6 +11,9 @@ public class ShadowBoxingLogic
     public bool IsGameOver { get; private set; }
     public Player Winner { get; private set; }
 
+    // Trừu tượng hóa việc lấy chuỗi combo ra ngoài cho GameController
+    public IReadOnlyList<Direction> ComboSequence => CurrentAttacker.ComboSequence;
+
     private const int WINNING_COMBO = 3;
 
     public ShadowBoxingLogic(string p1Name, string p2Name)
@@ -16,24 +21,20 @@ public class ShadowBoxingLogic
         Player1 = new Player(p1Name);
         Player2 = new Player(p2Name);
         
-        // Random hoặc set cứng người đi trước. Ở đây cho Player 1 đánh trước.
         Player1.IsAttacker = true;
         CurrentAttacker = Player1;
         CurrentDefender = Player2;
-        IsGameOver = false;
     }
 
-    // Hàm nhận input của cả 2 và xử lý kết quả lượt chơi
     public void ProcessTurn(Direction attackerMove, Direction defenderMove)
     {
-        if (IsGameOver) return; // Game kết thúc rồi thì không xử lý nữa
+        if (IsGameOver) return;
 
         if (attackerMove == defenderMove)
         {
-            // Đoán trúng -> Tăng combo
-            CurrentAttacker.AddCombo();
+            CurrentAttacker.AddCombo(attackerMove);
             
-            if (CurrentAttacker.Combo >= WINNING_COMBO)
+            if (CurrentAttacker.ComboCount >= WINNING_COMBO)
             {
                 IsGameOver = true;
                 Winner = CurrentAttacker;
@@ -41,7 +42,6 @@ public class ShadowBoxingLogic
         }
         else
         {
-            // Lệch hướng -> Reset combo và đổi vai trò
             CurrentAttacker.ResetCombo();
             SwapRoles();
         }
@@ -49,13 +49,9 @@ public class ShadowBoxingLogic
 
     private void SwapRoles()
     {
-        // Đổi trạng thái cờ
         CurrentAttacker.IsAttacker = false;
         CurrentDefender.IsAttacker = true;
 
-        // Hoán đổi vị trí con trỏ (reference)
-        Player temp = CurrentAttacker;
-        CurrentAttacker = CurrentDefender;
-        CurrentDefender = temp;
+        (CurrentAttacker, CurrentDefender) = (CurrentDefender, CurrentAttacker); // Cú pháp Tuple hoán đổi của C#
     }
 }
