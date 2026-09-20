@@ -247,8 +247,13 @@ public class GameController : MonoBehaviour
         {
             txtCombo.text = "Combo: " + gameLogic.ComboSequence.Count + "/3";
         }
-    }
 
+        // Truyền thẳng tên rút gọn vào đây. Nếu đang chơi với máy thì báo là BOT.
+        p1Visual.SetIndicatorState(gameLogic.Player1.IsAttacker, "P1");
+        
+        string p2Label = isAIMode ? "AI" : "P2";
+        p2Visual.SetIndicatorState(gameLogic.Player2.IsAttacker, p2Label);
+    }
     private IEnumerator ComboPopEffect()
     {
         if (txtCombo == null) yield break;

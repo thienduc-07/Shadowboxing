@@ -24,6 +24,10 @@ public class PlayerVisual : MonoBehaviour
     [SerializeField] private DirectionalSprites attackSprites;
     [SerializeField] private DirectionalSprites defendSprites;
 
+    // ---> THÊM DÒNG NÀY: Khai báo Indicator
+    [Header("Hiệu ứng trên đầu")]
+    [SerializeField] private FloatingIndicator indicator; 
+
     private SpriteRenderer spriteRenderer;
 
     void Awake()
@@ -40,5 +44,14 @@ public class PlayerVisual : MonoBehaviour
     {
         DirectionalSprites currentSet = isAttacking ? attackSprites : defendSprites;
         spriteRenderer.sprite = currentSet.GetSprite(dir);
+    }
+
+   
+    public void SetIndicatorState(bool isAttacker, string playerName)
+    {
+        if (indicator != null)
+        {
+            indicator.UpdateState(isAttacker, playerName);
+        }
     }
 }
