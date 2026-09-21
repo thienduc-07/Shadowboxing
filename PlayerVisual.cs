@@ -46,7 +46,7 @@ public class PlayerVisual : MonoBehaviour
         spriteRenderer.sprite = currentSet.GetSprite(dir);
     }
 
-   
+
     public void SetIndicatorState(bool isAttacker, string playerName)
     {
         if (indicator != null)
@@ -54,4 +54,12 @@ public class PlayerVisual : MonoBehaviour
             indicator.UpdateState(isAttacker, playerName);
         }
     }
+    public void HideIndicator()
+    {
+        if (indicator != null)
+        {
+            indicator.gameObject.SetActive(false); // Ẩn cái mũi tên đi
+        }
+    }
+    
 }
