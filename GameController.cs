@@ -278,6 +278,8 @@ public class GameController : MonoBehaviour
         if (btnSettings != null) btnSettings.SetActive(false);
         if (txtAttacker != null) txtAttacker.gameObject.SetActive(false);
         if (txtCombo != null) txtCombo.gameObject.SetActive(false);
+        if (p1Visual != null) p1Visual.HideIndicator();
+        if (p2Visual != null) p2Visual.HideIndicator();
 
         if (bgmSource != null) bgmSource.Stop();
         PlaySFX(koSound);
